@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel DDSE Staff Only</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@600;700;800&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- Password Gate -->
+  <div class="admin-gate" id="admin-gate">
+    <form class="admin-gate-form" id="admin-pw-form">
+      <div class="nav-logo" style="justify-content:center;margin-bottom:var(--space-xl)">
+        <img src="assets/images/logo.png" alt="DDSE Logo" class="nav-logo-img">
+        <div class="nav-logo-text" style="color:var(--text-inverse)">DD<span>SE</span></div>
+      </div>
+      <h2 style="color:var(--text-inverse)">Admin Panel<br></h2>
+      <p style="color:var(--text-light);margin-bottom:var(--space-xl)">Staff access only. Enter your password.</p>
+      <div class="form-group">
+        <label class="form-label" for="admin-password" style="color:var(--text-inverse)">Password পাসওয়ার্ড</label>
+        <input class="form-input form-input-dark" type="password" id="admin-password" placeholder="Enter admin password" required autocomplete="off">
+      </div>
+      <p id="admin-pw-error" style="color:var(--error);font-size:.9rem;margin-bottom:var(--space-md);display:none"></p>
+      <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center">Enter Panel →</button>
+    </form>
+  </div>
+
+  <!-- Admin Panel (hidden until auth) -->
+  <div id="admin-panel-main" style="display:none">
+      <header>
+    <div class="topbar">
+      <div class="container flex-between">
+        <div class="topbar-left" style="display:flex;gap:15px">
+          <span>📞 01754-012596</span>
+          <span>✉️ <a href="mailto:ddsebd52454@gmail.com">ddsebd52454@gmail.com</a></span>
+        </div>
+        <div class="topbar-right">
+          <span>📍 Barisal & Dhaka, Bangladesh</span>
+        </div>
+      </div>
+    </div>
+      <nav class="navbar navbar--scrolled"><div class="container flex-between">
+        <a href="index.html" class="nav-logo"><img src="assets/images/logo.png" alt="DDSE Logo" class="nav-logo-img"><div class="nav-logo-text">DD<span>SE</span></div></a>
+        <div style="display:flex;align-items:center;gap:var(--space-md)">
+          <span style="color:var(--emerald);font-size:.9rem">● Admin Mode</span>
+          <a href="index.html" class="btn btn-outline btn-sm">Back to Site</a>
+        </div>
+      </div></nav>
+    </header>
+
+    <main style="padding-top:100px">
+      <section class="section-light">
+        <div class="container" style="max-width:800px">
+          <h1 class="section-title text-center" style="margin-bottom:var(--space-xl)">DDSE Admin Panel<br></h1>
+
+          <!-- Tabs -->
+          <div class="admin-tabs">
+            <button class="admin-tab active" data-panel="panel-report">Upload Report</button>
+            <button class="admin-tab" data-panel="panel-gallery">Upload Gallery Photo</button>
+          </div>
+
+          <!-- Upload Report Panel -->
+          <div class="admin-panel active" id="panel-report">
+            <form id="upload-report-form">
+              <div class="grid-2">
+                <div class="form-group">
+                  <label class="form-label" for="client-name">Client Name ক্লায়েন্টের নাম</label>
+                  <input class="form-input" type="text" id="client-name" placeholder="Full name" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="client-phone">Client Phone ফোন নম্বর</label>
+                  <input class="form-input" type="tel" id="client-phone" placeholder="01XXXXXXXXX" required>
+                </div>
+              </div>
+              <div class="grid-2">
+                <div class="form-group">
+                  <label class="form-label" for="survey-type">Survey Type সেবার ধরন</label>
+                  <select class="form-select" id="survey-type" required>
+                    <option value="">Select type</option>
+                    <option value="Topographic Survey">Topographic Survey</option>
+                    <option value="Soil Test">Soil Test</option>
+                    <option value="Road & Bridge Survey">Road & Bridge Survey</option>
+                    <option value="Canal & Land Survey">Canal & Land Survey</option>
+                    <option value="Hydrographic Survey">Hydrographic Survey</option>
+                    <option value="Contour Survey">Contour Survey</option>
+                    <option value="Level Survey">Level Survey</option>
+                    <option value="Pile Integrity Test">Pile Integrity Test</option>
+                    <option value="Volume Calculation">Volume Calculation</option>
+                    <option value="Architectural Plan">Architectural Plan</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="survey-location">Location অবস্থান</label>
+                  <input class="form-input" type="text" id="survey-location" placeholder="e.g. Agailjhara, Barisal" required>
+                </div>
+              </div>
+              <div class="grid-2">
+                <div class="form-group">
+                  <label class="form-label" for="survey-date">Date তারিখ</label>
+                  <input class="form-input" type="date" id="survey-date" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="report-file">PDF Report রিপোর্ট ফাইল</label>
+                  <input class="form-input" type="file" id="report-file" accept=".pdf" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="survey-desc">Description বিবরণ</label>
+                <textarea class="form-textarea" id="survey-desc" placeholder="Brief description of the survey..." rows="3"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center">Upload & Register আপলোড ও নিবন্ধন</button>
+            </form>
+            <div id="report-upload-status" style="margin-top:var(--space-lg)"></div>
+          </div>
+
+          <!-- Upload Gallery Panel -->
+          <div class="admin-panel" id="panel-gallery">
+            <form id="upload-gallery-form">
+              <div class="form-group">
+                <label class="form-label" for="gallery-category">Category ক্যাটাগরি</label>
+                <select class="form-select" id="gallery-category" required>
+                  <option value="">Select category</option>
+                  <option value="topographic">Topographic Survey</option>
+                  <option value="road-bridge">Road & Bridge</option>
+                  <option value="canal-land">Canal & Land</option>
+                  <option value="soil-test">Soil Test</option>
+                  <option value="hydrographic">Hydrographic</option>
+                  <option value="office">Office & Equipment</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="gallery-file">Image File ছবি</label>
+                <input class="form-input" type="file" id="gallery-file" accept="image/*" required>
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center">Upload Photo ছবি আপলোড</button>
+            </form>
+            <div id="gallery-upload-status" style="margin-top:var(--space-lg)"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script src="../config.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

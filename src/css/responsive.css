@@ -1,0 +1,65 @@
+/* ─── Mobile First: Base (375px+) ─── */
+@media (max-width: 1024px) {
+  .nav-links { display: none; }
+  .nav-cta { display: none; }
+  .hamburger { display: flex; }
+  .mobile-menu { display: flex; }
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .stats-bar { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: repeat(2, 1fr); }
+  .team-card-premium { grid-template-columns: 1fr; }
+  .team-card-premium .team-card-photo { height: 200px; }
+  .team-card-premium .team-card-info { text-align: center; }
+}
+
+@media (max-width: 768px) {
+  section { padding: var(--space-2xl) 0; }
+  .container { padding: 0 var(--space-md); }
+  .hero-content { padding: var(--space-3xl) var(--space-md) var(--space-2xl); }
+  .hero-title { font-size: clamp(1.8rem, 8vw, 2.8rem); }
+  .hero-cta-group { flex-direction: column; }
+  .hero-cta-group .btn { width: 100%; justify-content: center; }
+  .grid-2 { grid-template-columns: 1fr; }
+  .grid-3 { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .page-hero { padding: var(--space-3xl) 0 var(--space-2xl); }
+  .filter-tabs { gap: var(--space-xs); }
+  .filter-tab { padding: var(--space-xs) var(--space-md); font-size: .8rem; }
+  .footer-grid { grid-template-columns: 1fr; gap: var(--space-xl); }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+
+@media (max-width: 480px) {
+  .grid-4 { grid-template-columns: 1fr; }
+  .stats-bar { grid-template-columns: repeat(2, 1fr); gap: var(--space-lg); }
+  .gallery-grid { grid-template-columns: 1fr; }
+  .hero { min-height: 90vh; }
+  h1 { font-size: clamp(1.6rem, 7vw, 2.2rem); }
+  h2 { font-size: clamp(1.4rem, 6vw, 1.8rem); }
+  .btn-lg { padding: var(--space-sm) var(--space-lg); font-size: .95rem; }
+}
+
+/* ─── Large Screens ─── */
+@media (min-width: 1536px) {
+  .container { max-width: 1400px; }
+  body { font-size: 17px; }
+}
+
+/* ─── Reduced Motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .page-loader { display: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* ─── Print ─── */
+@media print {
+  .navbar, .footer, .page-loader, .scroll-indicator, .hero-orb { display: none; }
+  body { color: #000; background: #fff; }
+  section { padding: 1rem 0; }
+}

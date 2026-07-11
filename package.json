@@ -1,0 +1,16 @@
+{
+  "name": "ddse-website",
+  "version": "1.0.0",
+  "description": "Official website for Dimension Digital Survey & Engineering — A Trusted Institution for Topographical Survey & Soil Test",
+  "scripts": {
+    "dev": "parcel src/index.html src/about.html src/services.html src/team.html src/ceo.html src/reports.html src/gallery.html src/contact.html src/admin.html --open",
+    "build": "parcel build src/index.html src/about.html src/services.html src/team.html src/ceo.html src/reports.html src/gallery.html src/contact.html src/admin.html --dist-dir dist --public-url ./",
+    "clean": "rm -rf dist .parcel-cache"
+  },
+  "devDependencies": {
+    "parcel": "^2.13.0"
+  },
+  "keywords": ["ddse", "survey", "bangladesh", "engineering", "soil-test"],
+  "author": "Dimension Digital Survey & Engineering",
+  "license": "UNLICENSED"
+}

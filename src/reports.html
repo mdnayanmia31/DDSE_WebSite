@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download Report DDSE | Survey Report Download</title>
+  <meta name="description" content="Download your completed survey report from DDSE using your Report ID and registered phone number. No account required.">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@600;700;800&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div class="page-loader"><div class="loader-content"><img src="assets/images/logo.png" alt="DDSE Logo" class="loader-logo-img"><div class="loader-bar"></div></div></div>
+    <header>
+    <div class="topbar">
+      <div class="container flex-between">
+        <div class="topbar-left" style="display:flex;gap:15px">
+          <span>📞 01754-012596</span>
+          <span>✉️ <a href="mailto:ddsebd52454@gmail.com">ddsebd52454@gmail.com</a></span>
+        </div>
+        <div class="topbar-right">
+          <span>📍 Barisal & Dhaka, Bangladesh</span>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar"><div class="container flex-between">
+      <a href="index.html" class="nav-logo"><img src="assets/images/logo.png" alt="DDSE Logo" class="nav-logo-img"><div class="nav-logo-text">DD<span>SE</span></div></a>
+      <div class="nav-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="team.html">Team</a><a href="ceo.html">CEO</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a></div>
+      <a href="reports.html" class="btn btn-primary btn-sm nav-cta">Download Report</a>
+      <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div></nav>
+    <div class="mobile-menu"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="team.html">Team</a><a href="ceo.html">CEO</a><a href="reports.html">Reports</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a></div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Download Report<br></h1>
+        <div class="breadcrumb"><a href="index.html">Home</a><span class="separator">/</span><span>Reports</span></div>
+      </div>
+    </section>
+
+    <section class="section-light">
+      <div class="container container-sm">
+        <div class="text-center mb-xl reveal-up">
+          <h2 class="section-title">Find Your Survey Report</h2>
+          <p>Download your completed survey report using your Report ID and registered phone number. No account required.</p>
+          
+        </div>
+
+        <div class="card reveal-up" style="padding:var(--space-2xl)">
+          <form id="report-form">
+            <div class="form-group">
+              <label class="form-label" for="report-id">Report ID রিপোর্ট আইডি</label>
+              <input class="form-input" type="text" id="report-id" name="report-id" placeholder="e.g. DDSE-2024-001" required autocomplete="off">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="report-phone">Phone Number ফোন নম্বর</label>
+              <input class="form-input" type="tel" id="report-phone" name="phone" placeholder="e.g. 01712345678" required autocomplete="off">
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg" id="report-find-btn" style="width:100%;justify-content:center">Find My Report → রিপোর্ট খুঁজুন</button>
+          </form>
+          <div id="report-result" style="margin-top:var(--space-lg)"></div>
+        </div>
+
+        <!-- Instructions -->
+        <div class="mt-2xl reveal-up">
+          <h3 class="mb-lg">How It Works কিভাবে কাজ করে</h3>
+          <div class="grid-3" style="gap:var(--space-lg)">
+            <div class="card text-center">
+              <div style="font-size:2rem;margin-bottom:var(--space-md)">1️⃣</div>
+              <h4 class="mb-sm">Get Your Report ID</h4>
+              <p style="font-size:.9rem">Your Report ID (e.g. DDSE-2024-001) is provided by our office when your survey is completed.</p>
+            </div>
+            <div class="card text-center">
+              <div style="font-size:2rem;margin-bottom:var(--space-md)">2️⃣</div>
+              <h4 class="mb-sm">Enter Your Details</h4>
+              <p style="font-size:.9rem">Enter your Report ID and the phone number registered with us in the form above.</p>
+            </div>
+            <div class="card text-center">
+              <div style="font-size:2rem;margin-bottom:var(--space-md)">3️⃣</div>
+              <h4 class="mb-sm">Download PDF</h4>
+              <p style="font-size:.9rem">Once verified, your report will be ready for instant download as a PDF document.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Fallback -->
+        <div class="mt-2xl text-center reveal-up">
+          <div class="card" style="background:var(--surface-mid);padding:var(--space-xl)">
+            <h4 class="mb-md">Need Help? সাহায্য প্রয়োজন?</h4>
+            <p>If you're having trouble finding your report, please contact our office directly:</p>
+            <p><strong>📞 01754-012596</strong> | <strong>✉️ ddsebd52454@gmail.com</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col"><div class="footer-logo"><img src="assets/images/logo.png" alt="DDSE Logo" class="footer-logo-img"><span class="footer-logo-text">DDSE</span></div><p class="footer-bangla bangla-text">ডাইমেনশন ডিজিটাল সার্ভে অ্যান্ড ইঞ্জিনিয়ারিং</p><p>A Trusted Institution for Topographical Survey & Soil Test.</p></div>
+        <div class="footer-col"><h4>Quick Links</h4><a href="about.html">About</a><a href="services.html">Services</a><a href="team.html">Team</a><a href="contact.html">Contact</a></div>
+        <div class="footer-col"><h4>Services</h4><a href="services.html#topographic">Topographic Survey</a><a href="services.html#soil-test">Soil Test</a></div>
+        <div class="footer-col"><h4>Contact</h4><p>📞 01754-012596</p><p>✉️ ddsebd52454@gmail.com</p><div class="social-links" style="margin-top:1.5rem;display:flex;gap:1.5rem;"><a href="#" target="_blank" title="Facebook Page" style="color:var(--text-light);transition:color 0.3s ease;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-light)'"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a><a href="https://wa.me/8801754012596" target="_blank" title="WhatsApp Us" style="color:var(--text-light);transition:color 0.3s ease;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-light)'"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></a></div></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2015–<span id="current-year">2026</span> Dimension Digital Survey &amp; Engineering. All rights reserved.</p><div class="badge-approved"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><span>Licence No: 6397</span></div></div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+  <script src="../config.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/reports.js"></script>
+</body>
+</html>
