@@ -8,6 +8,24 @@
   <meta property="og:title" content="DDSE Dimension Digital Survey & Engineering">
   <meta property="og:description" content="Survey of Bangladesh Approved. Professional digital survey & soil testing since 2015.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ddsebd.com/">
+  <meta property="og:image" content="https://ddsebd.com/assets/images/logo.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Dimension Digital Survey & Engineering",
+    "alternateName": "DDSE",
+    "telephone": "+8801754012596",
+    "email": "ddsebd52454@gmail.com",
+    "foundingDate": "2015",
+    "address": [
+      { "@type": "PostalAddress", "streetAddress": "Helen Plaza (2nd Floor), Major MA Jalil Road, Hatam Ali College Chowmatha", "addressLocality": "Barisal", "addressCountry": "BD" },
+      { "@type": "PostalAddress", "streetAddress": "Level #2, Ji-36, Rejesi Hok Villa, Japanese School Road, Gulshan", "addressLocality": "Dhaka", "postalCode": "1212", "addressCountry": "BD" }
+    ],
+    "areaServed": "BD"
+  }
+  </script>
   <link rel="icon" type="image/png" href="assets/images/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,7 +65,7 @@
           <div class="nav-logo-text">DD<span>SE</span></div>
         </a>
         <div class="nav-links">
-          <a href="index.html" class="active">Home</a>
+          <a href="index.html">Home</a>
           <a href="about.html">About</a>
           <a href="services.html">Services</a>
           <a href="team.html">Team</a>
@@ -106,7 +124,7 @@
       <div class="container">
         <div class="stats-bar">
           <div class="stat-item reveal-up">
-            <span class="stat-number" id="experience-counter" data-counter="10" data-suffix="+">0+</span>
+            <span class="stat-number dynamic-years-counter" id="experience-counter" data-counter="10" data-suffix="+">0+</span>
             <span class="stat-label">Years of Experience<br></span>
           </div>
           <div class="stat-item reveal-up">
@@ -219,15 +237,15 @@
         <div class="grid grid-3 reveal-stagger">
           <div class="card card-dark">
             <h3 class="card-title">Total Stations</h3>
-            <p class="card-text">Advanced Leica and Sokkia robotic total stations for high-accuracy angular and distance measurements in complex terrains.</p>
+            <p class="card-text">Fleet of 8 Kolida KTS442 R6 L6 and 2 Sokkia robotic total stations for high-accuracy angular and distance measurements.</p>
           </div>
           <div class="card card-dark">
-            <h3 class="card-title">RTK GPS & GNSS</h3>
-            <p class="card-text">Real-Time Kinematic satellite navigation systems for instant, centimeter-level global positioning and boundary mapping.</p>
+            <h3 class="card-title">RTK GPS & Drones</h3>
+            <p class="card-text">2 RTK GNSS systems for centimeter-level global positioning, paired with 2 DJI aerial mapping drones for rapid topographical acquisition.</p>
           </div>
           <div class="card card-dark">
-            <h3 class="card-title">Digital Levels & Drones</h3>
-            <p class="card-text">High-precision digital leveling instruments and aerial mapping drones for rapid, large-scale topographical data acquisition.</p>
+            <h3 class="card-title">Bathymetric & Soil Testing</h3>
+            <p class="card-text">Equipped with 2 Echosounders for hydrographic surveys, alongside complete geotechnical rigs including 300 Shelby tubes for undisturbed soil sampling.</p>
           </div>
         </div>
         <div class="text-center reveal-up" style="margin-top:var(--space-xl)">
@@ -298,7 +316,7 @@
                 <label class="form-label" for="mini-phone" style="color:var(--text-inverse)">Phone ফোন নম্বর</label>
                 <input class="form-input form-input-dark" type="tel" id="mini-phone" placeholder="e.g. 01712345678">
               </div>
-              <a href="reports.html" class="btn btn-primary" style="width:100%;justify-content:center">Find Report →</a>
+              <button type="button" id="mini-report-submit" class="btn btn-primary" style="width:100%;justify-content:center">Find Report →</button>
             </form>
           </div>
         </div>
@@ -437,7 +455,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2015–2026 Dimension Digital Survey & Engineering. All rights reserved.</p>
+        <p>&copy; 2015–<span id="current-year"></span> Dimension Digital Survey & Engineering. All rights reserved.</p>
         <div class="badge-approved">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           <span>Licence No: 6397</span>

@@ -89,6 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (typeof ScrollTrigger !== 'undefined') {
       gsap.registerPlugin(ScrollTrigger);
     }
+    const navbar = document.querySelector('.navbar');
 
     // Navbar entrance
     if (navbar) {
@@ -101,14 +102,12 @@ document.addEventListener('DOMContentLoaded', () => {
       // Hero entrance timeline
       const heroTl = gsap.timeline({ delay: 1.4 });
       const heroTag = hero.querySelector('.hero-tag');
-      const heroBangla = hero.querySelector('.hero-bangla');
       const heroTitle = hero.querySelector('.hero-title');
       const heroSubtitle = hero.querySelector('.hero-subtitle');
       const heroCta = hero.querySelector('.hero-cta-group');
       const scrollInd = hero.querySelector('.scroll-indicator');
 
       if (heroTag) heroTl.from(heroTag, { opacity: 0, y: -20, duration: 0.6, ease: 'power3.out' });
-      if (heroBangla) heroTl.from(heroBangla, { opacity: 0, y: 20, duration: 0.5, ease: 'power3.out' }, '-=0.3');
       if (heroTitle) {
         const lines = heroTitle.querySelectorAll('.line');
         if (lines.length > 0) {
@@ -119,9 +118,9 @@ document.addEventListener('DOMContentLoaded', () => {
           heroTl.from(heroTitle, { opacity: 0, y: 60, duration: 0.9, ease: 'power4.out' }, '-=0.3');
         }
       }
-      if (heroSubtitle) heroTl.from(heroSubtitle, { opacity: 0, y: 30, duration: 0.7, ease: 'power3.out' }, '-=0.4');
-      if (heroCta) heroTl.from(heroCta, { opacity: 0, y: 20, duration: 0.6, ease: 'power3.out' }, '-=0.3');
-      if (scrollInd) heroTl.from(scrollInd, { opacity: 0, duration: 0.5, ease: 'power3.out' }, '-=0.2');
+      if (heroSubtitle) heroTl.from(heroSubtitle, { opacity: 0, y: 20, duration: 0.6, ease: 'power2.out' }, '-=0.2');
+      if (heroCta) heroTl.from(heroCta, { opacity: 0, y: 20, duration: 0.6, ease: 'power2.out' }, '-=0.4');
+      if (scrollInd) heroTl.from(scrollInd, { opacity: 0, duration: 1 }, '-=0.2');
 
       // Glowing orb animation
       const orbs = hero.querySelectorAll('.hero-orb');
@@ -213,14 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Parallax hero BG
-    const heroBg = document.querySelector('.hero-bg-layer');
-    if (heroBg) {
-      gsap.to(heroBg, {
-        yPercent: 30, ease: 'none',
-        scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true }
-      });
-    }
+
 
     // Timeline items entrance
     document.querySelectorAll('.timeline-item').forEach(item => {
@@ -260,4 +252,17 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.dynamic-years-bengali').forEach(el => {
     el.textContent = expYearsBn;
   });
+
+  // ─── Mini Report Form (Home Page) ───
+  const miniReportBtn = document.getElementById('mini-report-submit');
+  if (miniReportBtn) {
+    miniReportBtn.addEventListener('click', () => {
+      const id = document.getElementById('mini-report-id')?.value.trim();
+      const phone = document.getElementById('mini-phone')?.value.trim();
+      const params = new URLSearchParams();
+      if (id) params.set('id', id);
+      if (phone) params.set('phone', phone);
+      window.location.href = `reports.html${params.toString() ? '?' + params : ''}`;
+    });
+  }
 });

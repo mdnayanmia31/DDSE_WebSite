@@ -95,4 +95,17 @@
       container.innerHTML = `<div class="loading-wrap"><div class="loading-spinner"></div><p class="loading-text">${message}</p></div>`;
     }
   }
+
+  // ─── Auto-submit from URL parameters ───
+  const params = new URLSearchParams(window.location.search);
+  const paramId = params.get('id');
+  const paramPhone = params.get('phone');
+  
+  if (paramId) document.getElementById('report-id').value = paramId;
+  if (paramPhone) document.getElementById('report-phone').value = paramPhone;
+  
+  if (paramId && paramPhone) {
+    // Auto-trigger submit event
+    form.dispatchEvent(new Event('submit', { cancelable: true, bubbles: true }));
+  }
 })();

@@ -27,6 +27,9 @@
   /* ─── Warm Highlight ─── */
   --gold:          #F5A623;
   --gold-dark:     #D4891A;
+  --gold-muted:    rgba(245, 166, 35, 0.15);
+  --gold-muted-light: rgba(245, 166, 35, 0.08);
+  --gold-muted-border: rgba(245, 166, 35, 0.3);
 
   /* ─── Surface ─── */
   --surface:       #F0F5FA;
@@ -504,7 +507,6 @@ section {
 .hero-cta-group,
 .hero-stats-bar,
 .hero-tag,
-.hero-orb,
 .stat-number,
 .service-card,
 .card-icon,
