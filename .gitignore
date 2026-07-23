@@ -9,3 +9,4 @@ Profile.pdf
 src.zip
 *.zip
 .~lock.*
+.agent/
