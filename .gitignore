@@ -7,3 +7,5 @@ config.js
 Thumbs.db
 Profile.pdf
 src.zip
+*.zip
+.~lock.*

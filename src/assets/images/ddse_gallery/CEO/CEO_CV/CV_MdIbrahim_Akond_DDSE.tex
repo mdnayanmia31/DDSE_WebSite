@@ -1,0 +1,306 @@
+%========================================================
+%  CV -- Md. Ibrahim Akond
+%  Managing Director, Dimension Digital Survey & Engineering
+%  Target: Exactly 2 pages on A4
+%========================================================
+\documentclass[10.5pt, a4paper]{article}
+
+% --- Core packages ---
+\usepackage[a4paper, top=1.4cm, bottom=1.4cm, left=1.4cm, right=1.4cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{parskip}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{graphicx}
+\usepackage{fontawesome5}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+
+\setstretch{1.0}
+\setlength{\parskip}{0pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{{\footnotesize\color{ddseMid} Page \thepage\ of 2}}
+
+%--- Color palette (DDSE brand) ---
+\definecolor{ddseNavy}{HTML}{0F2B45}
+\definecolor{ddseBlue}{HTML}{1E6DAF}
+\definecolor{ddseAmber}{HTML}{D4960A}
+\definecolor{ddseLight}{HTML}{F1F5F9}
+\definecolor{ddseMid}{HTML}{4A5568}
+\definecolor{ddseBorder}{HTML}{CBD5E1}
+
+%--- Hyperref config ---
+\hypersetup{
+  colorlinks=true,
+  urlcolor=ddseBlue,
+  linkcolor=ddseNavy,
+  pdfauthor={Md. Ibrahim Akond},
+  pdftitle={CV -- Md. Ibrahim Akond, Managing Director, DDSE}
+}
+
+%--- Section title formatting ---
+\titleformat{\section}
+  {\normalsize\bfseries\color{ddseNavy}\uppercase}
+  {}
+  {0em}
+  {}
+  [\vspace{-4pt}{\color{ddseAmber}\rule{\linewidth}{1.2pt}}\vspace{1pt}]
+
+\titlespacing{\section}{0pt}{7pt}{3pt}
+
+%--- Custom commands ---
+\newcommand{\cvtag}[1]{%
+  \fcolorbox{ddseBorder}{ddseLight}{\color{ddseNavy}\footnotesize\strut\ #1\ }%
+}
+
+\newcommand{\sidelabel}[1]{%
+  {\color{ddseMid}\small\textit{#1}}%
+}
+
+% Entry: role | org | date | location
+\newcommand{\cventry}[4]{%
+  \begin{tabularx}{\linewidth}{@{}X r@{}}
+    {\bfseries\color{ddseNavy} #1} & {\footnotesize\color{ddseMid} #3} \\
+    {\color{ddseBlue}\footnotesize #2} & {\footnotesize\color{ddseMid}\textit{#4}} \\
+  \end{tabularx}%
+}
+
+% Education entry: degree | institute | year | grade
+\newcommand{\eduentry}[4]{%
+  \begin{tabularx}{\linewidth}{@{}X r@{}}
+    {\bfseries\color{ddseNavy} #1} & {\footnotesize\color{ddseMid} #3} \\
+    {\color{ddseBlue}\footnotesize #2} & {\footnotesize\color{ddseMid} #4} \\
+  \end{tabularx}%
+}
+
+%========================================================
+\begin{document}
+
+%--- HEADER BLOCK ---
+\noindent
+\begin{minipage}[t]{0.58\linewidth}
+  \vspace{0pt}
+  {\fontsize{24}{28}\selectfont\bfseries\color{ddseNavy} Md. Ibrahim Akond}\\[3pt]
+  {\normalsize\color{ddseBlue} Managing Director \,|\, Civil Engineer}\\[4pt]
+  {\color{ddseMid}\footnotesize
+    B.Sc. in Civil Engineering \textbullet\
+    M.Sc. in GIS \textbullet\
+    Diploma in Civil Engineering
+  }
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.40\linewidth}
+  \vspace{0pt}
+  \raggedleft
+  {\color{ddseMid}\footnotesize
+    \faPhone\ \ +88\,01754\,012596 \quad \faWhatsapp\ \href{https://wa.me/8801754012596}{WhatsApp}\\[2pt]
+    \faEnvelope\ \ \href{mailto:ibrahimakond2016@gmail.com}{ibrahimakond2016@gmail.com}\\[2pt]
+    \faEnvelope\ \ \href{mailto:ddsebd52454@gmail.com}{ddsebd52454@gmail.com}\\[2pt]
+    \faMapMarkerAlt\ \ Gournadi, Barisal, Bangladesh\\[2pt]
+    \faLinkedin\ \ \href{https://www.linkedin.com/}{LinkedIn Profile}
+  }
+\end{minipage}
+
+\vspace{4pt}
+{\color{ddseAmber}\rule{\linewidth}{2pt}}
+
+%--- COMPANY AFFILIATION BANNER ---
+\vspace{1pt}
+\noindent
+\colorbox{ddseNavy!6}{%
+  \begin{minipage}{\dimexpr\linewidth-2\fboxsep}
+    \vspace{2pt}
+    \centering
+    {\footnotesize\color{ddseNavy}
+      \textbf{DIMENSION DIGITAL SURVEY \& ENGINEERING} \quad|\quad
+      Helen Plaza, Major MA. Jalil Sarok, Barisal, Bangladesh \\
+      \textit{Survey of Bangladesh Approved (Licence No. 6397)}
+    }
+    \vspace{2pt}
+  \end{minipage}%
+}
+
+\vspace{4pt}
+
+%--- PROFESSIONAL SUMMARY ---
+\section{Professional Summary}
+
+\small
+Civil Engineer with over 10 years of hands-on experience in digital land surveying, topographic mapping, soil investigation, and engineering project management. Founded and currently lead Dimension Digital Survey \& Engineering (DDSE), a Survey of Bangladesh approved firm that has completed 500+ projects for government agencies and private clients across Bangladesh. Skilled in field survey operations, AutoCAD drafting, GIS-based spatial analysis, and project delivery from site assessment to final report submission.
+
+\vspace{1pt}
+
+%--- CORE COMPETENCIES ---
+\section{Core Competencies}
+
+\noindent
+\cvtag{Topographic Survey}\enspace
+\cvtag{Digital Land Survey}\enspace
+\cvtag{Road \& Bridge Survey}\enspace
+\cvtag{Canal Survey}\enspace
+\cvtag{Soil Investigation}\\[4pt]
+\cvtag{AutoCAD 2D / 3D}\enspace
+\cvtag{GIS \& Remote Sensing}\enspace
+\cvtag{UAV/Drone Mapping}\enspace
+\cvtag{Site Supervision}\\[4pt]
+\cvtag{Project Management}\enspace
+\cvtag{Hydrographic Survey}\enspace
+\cvtag{RTK GNSS Positioning}\enspace
+\cvtag{Civil Construction}
+
+\vspace{1pt}
+
+%--- PROFESSIONAL EXPERIENCE ---
+\section{Professional Experience}
+
+\cventry{Managing Director}{Dimension Digital Survey \& Engineering, Barisal}{Aug 2018 -- Present}{Barisal, Bangladesh}
+
+\vspace{1pt}
+\begin{itemize}[leftmargin=1.2em, itemsep=1pt, topsep=1pt, parsep=0pt]
+  \item Founded the company and built a team of 15+ staff including civil engineers, surveyors, draftsmen, and field technicians.
+  \item Lead all survey operations -- topographic surveys, road and bridge alignment surveys, canal and land boundary surveys, and sub-soil investigation work.
+  \item Obtained Survey of Bangladesh government approval (Licence No. 6397), establishing the firm as a recognised practice.
+  \item Completed 500+ projects for government bodies (LGED, DPHE, BWDB, RHD, Bangladesh Railway) and private sector clients.
+  \item Handle client communication, project scoping, cost estimation, resource planning, quality checks, and report delivery.
+  \item Supervise AutoCAD drafting, digital data processing, and preparation of engineering drawings and survey reports.
+\end{itemize}
+
+\vspace{4pt}
+
+\cventry{Sr. Civil Construction \& Survey Consultant}{Sunmoon Survey Consultant}{Nov 2015 -- Apr 2017}{Bangladesh}
+
+\vspace{1pt}
+\begin{itemize}[leftmargin=1.2em, itemsep=1pt, topsep=1pt, parsep=0pt]
+  \item Provided civil construction and survey consultancy for government and non-government infrastructure projects.
+  \item Carried out topographic survey operations including site reconnaissance, instrument setup, data collection, and field supervision.
+  \item Prepared technical drawings and engineering documentation using AutoCAD (2D, 3D, and 3ds Max).
+\end{itemize}
+
+\vspace{1pt}
+
+%--- EDUCATIONAL QUALIFICATION ---
+\section{Education}
+
+\eduentry{M.Sc. in GIS for Environment and Development}{Jahangirnagar University, Savar, Dhaka, Bangladesh}{2025 -- Sep 2026}{CGPA: 3.75 / 4.00}
+
+\vspace{3pt}
+\eduentry{B.Sc. in Civil Engineering}{University of Global Village, Bangladesh}{2020}{CGPA: 3.58 / 4.00}
+
+\vspace{3pt}
+\eduentry{Diploma in Civil Engineering}{Infra Polytechnic Institute, Barisal, Bangladesh}{2015}{CGPA: 3.39 / 4.00}
+
+{\footnotesize\color{ddseMid}\hspace{0.5em}\textit{Board: Bangladesh Technical Education Board, Dhaka}}
+
+\vspace{3pt}
+\eduentry{Secondary School Certificate (SSC) -- Science}{Hoshnabadd Secondary School, Barisal}{2011}{GPA: 4.63 / 5.00}
+
+{\footnotesize\color{ddseMid}\hspace{0.5em}\textit{Board: Board of Intermediate \& Secondary Education, Barisal}}
+
+\vspace{1pt}
+
+%--- KEY PROJECTS ---
+\section{Selected Projects}
+
+\begin{itemize}[leftmargin=1.2em, itemsep=1pt, topsep=1pt, parsep=0pt]
+  \item \textbf{Sub-Soil Investigation} at multiple Upazila sites under LGED, Barisal Zone -- bore hole drilling, SPT testing, and geotechnical reporting.
+  \item \textbf{Improvement of District Bridge \& Culvert} survey work across Barisal and Patuakhali Zones for LGED.
+  \item \textbf{Coastal Towns Environmental Infrastructure Project (CTEIP)} -- topographic and soil investigation surveys.
+  \item \textbf{Pre \& Post Work Volume Calculation} for pond excavation projects using Digital Total Station (DTS).
+  \item \textbf{Road Alignment and Cross-Section Surveys} for RHD and Bangladesh Railway track improvement projects.
+\end{itemize}
+
+\vspace{1pt}
+
+%--- EQUIPMENT PROFICIENCY ---
+\section{Equipment \& Software}
+
+\vspace{1pt}
+{\small
+\begin{tabularx}{\linewidth}{@{} p{3cm} X @{}}
+  \textbf{\color{ddseNavy}Survey Equipment} & Kolida KTS-442 Total Station, RTK GNSS (Kolida R6/L6), Sokkia Total Station, Auto Levels (Topcon, Sokkia, Pentax AL-300), DJI RTK Drone, Echosounder, GPS Garmin \\[2pt]
+  \textbf{\color{ddseNavy}Soil Testing} & SPT Hammer, Shelby Tube Sampler, Casing Pipe, Drilling Pipe, Dongking Pump, Oedometer, Unconfined Compression Machine \\[2pt]
+  \textbf{\color{ddseNavy}Software} & AutoCAD (2D, 3D), Google Earth Pro, QGIS / ArcGIS, Microsoft Office Suite, Google Sheets \\
+\end{tabularx}
+}
+
+\vspace{1pt}
+
+%--- LANGUAGE SKILLS & INTERNATIONAL EXPOSURE (combined to save space) ---
+\section{Language Proficiency \& International Exposure}
+
+\vspace{1pt}
+{\small
+\begin{tabularx}{\linewidth}{@{} l X X X @{}}
+  \rowcolor{ddseNavy!6}
+  \textbf{\color{ddseNavy}Language} & \textbf{\color{ddseNavy}Speaking} & \textbf{\color{ddseNavy}Writing} & \textbf{\color{ddseNavy}Comprehension} \\[2pt]
+  Bangla  & Fluent   & Excellent & Excellent \\[1pt]
+  English & Good     & Good      & Good \\
+\end{tabularx}
+}
+
+\vspace{1pt}
+
+%--- PERSONAL INFORMATION & ADDRESS (combined) ---
+\section{Personal Information}
+
+\vspace{1pt}
+{\small
+\begin{tabularx}{\linewidth}{@{} p{3.8cm} X p{3.6cm} X @{}}
+  \sidelabel{Date of Birth}    & 20 April 1995          & \sidelabel{Nationality}    & Bangladeshi (by birth) \\[2pt]
+  \sidelabel{Place of Birth}   & Barisal, Bangladesh    & \sidelabel{Religion}       & Islam \\[2pt]
+  \sidelabel{Gender}           & Male                   & \sidelabel{Marital Status} & Married \\[2pt]
+  \sidelabel{Blood Group}      & O+                     & \sidelabel{NID No.}        & 3747643108 \\[2pt]
+  \sidelabel{Father's Name}    & Md. Mokbul Hossain Akond & \sidelabel{Mother's Name} & Jahanara Parvin \\
+\end{tabularx}
+}
+
+\vspace{4pt}
+{\small
+\begin{tabularx}{\linewidth}{@{} X X @{}}
+  \textbf{\color{ddseNavy}Mailing / Permanent Address} & \\[2pt]
+  \multicolumn{2}{@{}l}{C/O: Md. Mokbul Hossain Akond, Vill: Hoshnabadd, Post: Nizam Uddin College, Thana: Gournadi, Dist: Barisal} \\
+\end{tabularx}
+}
+
+\vspace{1pt}
+
+%--- DECLARATION ---
+\section{Declaration}
+
+\small
+I confirm that all information provided in this CV is true and accurate to the best of my knowledge. I take full responsibility for the correctness of the details stated above.
+
+\vspace{10pt}
+
+\noindent
+\begin{tabularx}{\linewidth}{@{} X r @{}}
+  & \includegraphics[height=1cm]{signature.png} \\[-4pt]
+  & {\color{ddseBorder}\rule{4.5cm}{0.5pt}} \\[1pt]
+  \textbf{Date:} 18 July 2026 & \textbf{Md. Ibrahim Akond} \\
+  & {\footnotesize\color{ddseMid} Managing Director, DDSE} \\
+\end{tabularx}
+
+%--- FOOTER ---
+\vfill
+\noindent{\color{ddseBorder}\rule{\linewidth}{0.5pt}}
+\vspace{1pt}
+\noindent
+{\scriptsize\color{ddseMid}
+  \textbf{Dimension Digital Survey \& Engineering} \quad
+  Helen Plaza, Major MA. Jalil Sarok, Barisal \quad
+  \textbullet\quad Tel: +88\,01754\,012596 \quad
+  \textbullet\quad ddsebd52454@gmail.com
+}
+
+\end{document}

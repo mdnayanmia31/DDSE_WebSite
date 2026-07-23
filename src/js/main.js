@@ -91,9 +91,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     const navbar = document.querySelector('.navbar');
 
-    // Navbar entrance
+    // Navbar entrance (animation removed to ensure visibility)
     if (navbar) {
-      gsap.from(navbar, { y: -80, opacity: 0, duration: 0.8, ease: 'power3.out', delay: 1.3 });
+      // gsap.from(navbar, { y: -80, opacity: 0, duration: 0.8, ease: 'power3.out', delay: 1.3 });
     }
 
     // Hero animations
@@ -122,18 +122,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (heroCta) heroTl.from(heroCta, { opacity: 0, y: 20, duration: 0.6, ease: 'power2.out' }, '-=0.4');
       if (scrollInd) heroTl.from(scrollInd, { opacity: 0, duration: 1 }, '-=0.2');
 
-      // Glowing orb animation
-      const orbs = hero.querySelectorAll('.hero-orb');
-      orbs.forEach((orb, i) => {
-        gsap.to(orb, {
-          x: i === 0 ? 80 : -60,
-          y: i === 0 ? 40 : -30,
-          duration: 8,
-          ease: 'sine.inOut',
-          repeat: -1,
-          yoyo: true
-        });
-      });
     }
 
     // ─── Dynamic Experience ───
@@ -234,11 +222,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ─── Dynamic Footer Year & Texts ───
-  const yearSpan = document.getElementById('current-year');
-  if (yearSpan) {
-    yearSpan.textContent = new Date().getFullYear();
-  }
-  
+ // Initialize Year Update
+if(document.getElementById('current-year')) {
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+}
+
+
   const expYearsGlobal = new Date().getFullYear() - 2015;
   
   // Update English text elements
@@ -253,7 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
     el.textContent = expYearsBn;
   });
 
-  // ─── Mini Report Form (Home Page) ───
+    // ─── Mini Report Form (Home Page) ───
   const miniReportBtn = document.getElementById('mini-report-submit');
   if (miniReportBtn) {
     miniReportBtn.addEventListener('click', () => {
@@ -265,4 +254,83 @@ document.addEventListener('DOMContentLoaded', () => {
       window.location.href = `reports.html${params.toString() ? '?' + params : ''}`;
     });
   }
+
+  initGlobalReach();
+  initPromoCarousel();
 });
+
+function initGlobalReach() {
+  const stops = document.querySelectorAll('.route-stop');
+  const tabs = document.querySelectorAll('.route-year-tabs button');
+  const panels = document.querySelectorAll('.route-year-panel');
+  if (!stops.length || !tabs.length || !panels.length) return;
+
+  const activateYear = (year) => {
+    tabs.forEach(t => t.classList.toggle('active', t.dataset.year === year));
+    panels.forEach(p => p.classList.toggle('active', p.dataset.year === year));
+    stops.forEach(s => s.classList.toggle('active', s.dataset.year === year));
+  };
+  tabs.forEach(tab => tab.addEventListener('click', () => activateYear(tab.dataset.year)));
+  stops.forEach(stop => {
+    stop.addEventListener('click', () => activateYear(stop.dataset.year));
+    stop.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); stop.click(); } });
+  });
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.querySelectorAll('.route-path').forEach((path, i) => {
+    const length = path.getTotalLength();
+    path.style.strokeDasharray = length;
+    path.style.strokeDashoffset = length;
+    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+      gsap.to(path, { strokeDashoffset: 0, duration: 1, ease: 'power2.out', delay: i * 0.12,
+        scrollTrigger: { trigger: '.route-map', start: 'top 75%', once: true } });
+    } else {
+      path.style.transition = `stroke-dashoffset 1s ${i * 0.12}s ease-out`;
+      requestAnimationFrame(() => requestAnimationFrame(() => { path.style.strokeDashoffset = 0; }));
+    }
+  });
+}
+
+function initPromoCarousel() {
+  const track = document.getElementById('promo-track');
+  const cards = document.querySelectorAll('.promo-card');
+  const dotsWrap = document.getElementById('promo-dots');
+  const carousel = document.getElementById('promo-carousel');
+  if (!track || !cards.length || !dotsWrap || !carousel) return;
+
+  let index = 0, timer = null;
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  cards.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'promo-dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+    dot.addEventListener('click', () => { goTo(i); startAuto(); });
+    dotsWrap.appendChild(dot);
+  });
+  const dots = dotsWrap.querySelectorAll('.promo-dot');
+
+  function goTo(i) {
+    index = (i + cards.length) % cards.length;
+    const offset = -index * 100;
+    if (typeof gsap !== 'undefined' && !reduced) {
+      gsap.to(track, { xPercent: offset, duration: 0.7, ease: 'power3.inOut' });
+    } else {
+      track.style.transform = `translateX(${offset}%)`;
+    }
+    cards.forEach((c, ci) => c.classList.toggle('is-active', ci === index));
+    dots.forEach((d, di) => d.classList.toggle('active', di === index));
+  }
+  const next = () => goTo(index + 1);
+  const prev = () => goTo(index - 1);
+  function startAuto() { if (reduced) return; stopAuto(); timer = setInterval(next, 6000); }
+  function stopAuto() { if (timer) clearInterval(timer); }
+
+  document.getElementById('promo-prev')?.addEventListener('click', () => { prev(); startAuto(); });
+  document.getElementById('promo-next')?.addEventListener('click', () => { next(); startAuto(); });
+  carousel.addEventListener('mouseenter', stopAuto);
+  carousel.addEventListener('mouseleave', startAuto);
+  carousel.addEventListener('focusin', stopAuto);
+  carousel.addEventListener('focusout', startAuto);
+  cards[0].classList.add('is-active');
+  startAuto();
+}

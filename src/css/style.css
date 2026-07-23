@@ -27,9 +27,10 @@
   /* ─── Warm Highlight ─── */
   --gold:          #F5A623;
   --gold-dark:     #D4891A;
-  --gold-muted:    rgba(245, 166, 35, 0.15);
-  --gold-muted-light: rgba(245, 166, 35, 0.08);
-  --gold-muted-border: rgba(245, 166, 35, 0.3);
+  --gold-muted:    rgba(245, 166, 35, 0.12);
+  --gold-border:   rgba(245, 166, 35, 0.3);
+  --glass-bg:      rgba(255, 255, 255, 0.05);
+  --glass-border:  rgba(255, 255, 255, 0.12);
 
   /* ─── Surface ─── */
   --surface:       #F0F5FA;
@@ -295,9 +296,9 @@ section {
 }
 
 .loader-logo-img {
-  width: 80px;
+  width: 160px;
   height: auto;
-  margin-bottom: var(--space-md);
+  margin: 0 auto var(--space-md) auto;
   animation: pulse 1.5s infinite;
 }
 @keyframes pulse {
@@ -509,7 +510,14 @@ section {
 .hero-tag,
 .stat-number,
 .service-card,
-.card-icon,
-.navbar {
+.card-icon {
   will-change: transform, opacity;
+}
+
+/* Push content down so the fixed header doesn't overlap it */
+main {
+  padding-top: 130px;
+}
+body.home main {
+  padding-top: 0;
 }
