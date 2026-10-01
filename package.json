@@ -4,7 +4,7 @@
   "description": "Official website for Dimension Digital Survey & Engineering — A Trusted Institution for Topographical Survey & Soil Test",
   "scripts": {
     "dev": "parcel src/index.html src/about.html src/services.html src/team.html src/ceo.html src/reports.html src/gallery.html src/contact.html src/admin.html src/projects.html --open",
-    "build": "parcel build src/index.html src/about.html src/services.html src/team.html src/ceo.html src/reports.html src/gallery.html src/contact.html src/admin.html src/projects.html --dist-dir dist --public-url ./",
+    "build": "node scripts/make-config.js && parcel build src/index.html src/about.html src/services.html src/team.html src/ceo.html src/reports.html src/gallery.html src/contact.html src/admin.html src/projects.html --dist-dir dist --public-url ./",
     "clean": "rm -rf dist .parcel-cache"
   },
   "devDependencies": {

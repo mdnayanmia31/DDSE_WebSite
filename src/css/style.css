@@ -6,68 +6,69 @@
 /* ─── CSS Custom Properties ─── */
 :root {
   /* ─── Primary Brand (Matched to Logo) ─── */
-  --primary-900:   #001a2e;
-  --primary-800:   #002845;
-  --primary-700:   #003c64; /* Logo Dark Navy */
-  --primary-600:   #005078; /* Logo Mid Blue */
-  --primary-500:   #00648c; /* Logo Light Blue */
-  --primary-400:   #007aab;
+  --primary-900:   #0B1D2E;
+  --primary-800:   #102A40;
+  --primary-700:   #163B56;
+  --primary-600:   #1E5070;
+  --primary-500:   #266488;
+  --primary-400:   #3080A4;
 
-  /* ─── Accent (Teal) ─── */
-  --accent:        #00b4d8; /* Compliment to logo blue */
-  --accent-dark:   #0096c7;
-  --accent-muted:  rgba(0, 180, 216, 0.15);
-  --accent-glow:   0 0 24px rgba(0, 180, 216, 0.35);
+  /* ─── Accent (Professional Teal) ─── */
+  --accent:        #1A97B5;
+  --accent-dark:   #137D98;
+  --accent-muted:  rgba(26, 151, 181, 0.12);
+  --accent-glow:   0 0 12px rgba(26, 151, 181, 0.15);
 
   /* ─── Secondary Accent (Logo Green) ─── */
-  --emerald:       #2d6a4f; /* Brightened Logo Green */
-  --emerald-dark:  #145028; /* Exact Logo Green */
-  --emerald-muted: rgba(20, 80, 40, 0.15);
+  --emerald:       #2D7A56;
+  --emerald-dark:  #1A5C3C;
+  --emerald-muted: rgba(45, 122, 86, 0.12);
 
-  /* ─── Warm Highlight ─── */
-  --gold:          #F5A623;
-  --gold-dark:     #D4891A;
-  --gold-muted:    rgba(245, 166, 35, 0.12);
-  --gold-border:   rgba(245, 166, 35, 0.3);
-  --glass-bg:      rgba(255, 255, 255, 0.05);
-  --glass-border:  rgba(255, 255, 255, 0.12);
+  /* ─── Warm Highlight (Trust Signal) ─── */
+  --gold:          #D4941A;
+  --gold-dark:     #B87D14;
+  --gold-muted:    rgba(212, 148, 26, 0.10);
+  --gold-muted-light: rgba(212, 148, 26, 0.08);
+  --gold-muted-border: rgba(212, 148, 26, 0.25);
+  --gold-border:   rgba(212, 148, 26, 0.25);
+  --glass-bg:      rgba(255, 255, 255, 0.04);
+  --glass-border:  rgba(255, 255, 255, 0.10);
 
   /* ─── Surface ─── */
-  --surface:       #F0F5FA;
+  --surface:       #F4F6F8;
   --surface-card:  #FFFFFF;
-  --surface-dark:  #071A2E;
-  --surface-mid:   #EBF2FA;
+  --surface-dark:  #0E2236;
+  --surface-mid:   #EDF1F5;
 
   /* ─── Text ─── */
-  --text-primary:   #0D1B2A;
-  --text-secondary: #4A5568;
-  --text-light:     #94A3B8;
-  --text-inverse:   #F0F5FA;
-  --text-accent:    #00C2FF;
+  --text-primary:   #1A2332;
+  --text-secondary: #4D5B6B;
+  --text-light:     #8A9AAE;
+  --text-inverse:   #F2F5F8;
+  --text-accent:    #1A97B5;
+  --text-nav:       rgba(242, 245, 248, 0.85);
 
   /* ─── UI States ─── */
-  --border:         #D0DCE8;
-  --border-dark:    #1A3A5C;
-  --success:        #06D6A0;
-  --error:          #EF4444;
-  --warning:        #F5A623;
-  --info:           #00C2FF;
+  --border:         #D4DCE4;
+  --border-dark:    #1E3D5A;
+  --success:        #2AAA7A;
+  --error:          #D94444;
+  --warning:        #D4941A;
+  --info:           #1A97B5;
 
   /* ─── Shadows ─── */
-  --shadow-sm:  0 1px 4px rgba(0, 0, 0, 0.08);
-  --shadow-md:  0 4px 20px rgba(0, 0, 0, 0.10);
-  --shadow-lg:  0 8px 40px rgba(0, 0, 0, 0.14);
-  --shadow-xl:  0 16px 64px rgba(0, 0, 0, 0.20);
-  --shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.18);
-  --glow-accent: 0 0 32px rgba(0, 194, 255, 0.25);
-  --glow-emerald: 0 0 24px rgba(6, 214, 160, 0.20);
+  --shadow-sm:  0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md:  0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-lg:  0 8px 32px rgba(0, 0, 0, 0.12);
+  --shadow-xl:  0 16px 48px rgba(0, 0, 0, 0.16);
+  --shadow-hover: 0 14px 40px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(212, 148, 26, 0.15);
 
   /* ─── Gradients ─── */
-  --gradient-hero:    linear-gradient(135deg, #030D1A 0%, #0D2744 55%, #0F3460 100%);
-  --gradient-section: linear-gradient(180deg, #071A2E 0%, #0D2744 100%);
-  --gradient-card:    linear-gradient(145deg, #0F3460 0%, #1A4D7C 100%);
-  --gradient-accent:  linear-gradient(135deg, #00C2FF 0%, #06D6A0 100%);
-  --gradient-text:    linear-gradient(135deg, #00C2FF 0%, #06D6A0 100%);
+  --gradient-hero:    linear-gradient(145deg, #0B1D2E 0%, #122D44 50%, #163B56 100%);
+  --gradient-section: linear-gradient(180deg, #0E2236 0%, #142F48 100%);
+  --gradient-card:    linear-gradient(145deg, #163B56 0%, #1E5070 100%);
+  --gradient-accent:  linear-gradient(135deg, #1A97B5 0%, #2AAA7A 100%);
+  --gradient-text:    linear-gradient(135deg, #1A97B5 0%, #2AAA7A 100%);
 
   /* ─── Border Radius ─── */
   --radius-sm:  6px;
@@ -121,6 +122,14 @@ body {
   color: var(--text-primary);
   background-color: var(--surface);
   overflow-x: hidden;
+}
+
+/* ─── Boxed Site Wrapper (Modern Layout) ─── */
+.site-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 img {
@@ -202,6 +211,10 @@ section {
 .section-dark {
   background: var(--gradient-section);
   color: var(--text-inverse);
+  margin: var(--space-2xl) 2vw;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px -10px rgba(11, 29, 46, 0.2);
 }
 
 .section-dark p {
@@ -209,11 +222,11 @@ section {
 }
 
 .section-light {
-  background-color: var(--surface);
+  background-color: transparent;
 }
 
 .section-alt {
-  background-color: var(--surface-mid);
+  background-color: transparent;
 }
 
 /* ─── Section Headers ─── */
@@ -516,7 +529,7 @@ section {
 
 /* Push content down so the fixed header doesn't overlap it */
 main {
-  padding-top: 130px;
+  padding-top: 70px;
 }
 body.home main {
   padding-top: 0;

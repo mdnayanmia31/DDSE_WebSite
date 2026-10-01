@@ -1,9 +1,13 @@
 /* ─── Mobile First: Base (375px+) ─── */
 @media (max-width: 1024px) {
-  .nav-links { display: none; }
-  .nav-cta { display: none; }
+  .nav-links { display: none !important; }
+  .nav-cta { display: none !important; }
   .hamburger { display: flex; }
-  .mobile-menu { display: flex; }
+  .hamburger span { background: var(--primary-900) !important; }
+  .mobile-menu { display: none; }
+  .mobile-menu.active { display: flex; }
+  .nav-logo-img { height: 30px; }
+  .nav-logo-text { font-size: 0.75rem; }
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
   .grid-3 { grid-template-columns: repeat(2, 1fr); }
   .stats-bar { grid-template-columns: repeat(2, 1fr); }
@@ -17,7 +21,7 @@
   section { padding: var(--space-2xl) 0; }
   .container { padding: 0 var(--space-md); }
   .hero-content { padding: var(--space-3xl) var(--space-md) var(--space-2xl); }
-  .hero-title { font-size: clamp(1.8rem, 8vw, 2.8rem); }
+  .hero-title { font-size: clamp(1.2rem, 5.5vw, 2.8rem); }
   .hero-cta-group { flex-direction: column; }
   .hero-cta-group .btn { width: 100%; justify-content: center; }
   .grid-2 { grid-template-columns: 1fr; }
@@ -38,6 +42,48 @@
   h1 { font-size: clamp(1.6rem, 7vw, 2.2rem); }
   h2 { font-size: clamp(1.4rem, 6vw, 1.8rem); }
   .btn-lg { padding: var(--space-sm) var(--space-lg); font-size: .95rem; }
+}
+
+/* ─── Trust Section Responsive ─── */
+@media (max-width: 768px) {
+  .proof-strip {
+    gap: var(--space-lg);
+    flex-direction: column;
+    align-items: center;
+  }
+  .proof-stat {
+    min-width: 120px;
+  }
+  .proof-stat-number {
+    font-size: clamp(1.6rem, 5vw, 2.2rem);
+  }
+  .badge-approved {
+    font-size: .75rem;
+    padding: var(--space-xs) var(--space-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .proof-strip {
+    gap: var(--space-md);
+  }
+  .proof-stat {
+    min-width: 100px;
+    flex-direction: row;
+    gap: var(--space-sm);
+    justify-content: center;
+    align-items: baseline;
+  }
+  .proof-stat-number {
+    font-size: 1.5rem;
+  }
+  .proof-stat-label {
+    font-size: .75rem;
+  }
+  .proof-badges {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
 }
 
 /* ─── Large Screens ─── */
