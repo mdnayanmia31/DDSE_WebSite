@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
+  <div class="site-wrapper">
   <!-- Password Gate -->
   <div class="admin-gate" id="admin-gate">
     <form class="admin-gate-form" id="admin-pw-form">
@@ -40,49 +41,183 @@
   <!-- Admin Panel (hidden until auth) -->
   <div id="admin-panel-main" style="display:none">
       <header>
-  <div class="topbar">
-    <div class="container">
-      <div class="topbar-left">
-        <span>01754-012596</span>
-        <span><a href="mailto:ddsebd52454@gmail.com">ddsebd52454@gmail.com</a></span>
-      </div>
-      <div class="topbar-right">
-        <span>Barisal & Dhaka, Bangladesh</span>
-      </div>
-    </div>
-  </div>
-  <nav class="navbar">
-    <div class="container">
-      <a href="index.html" class="nav-logo">
-        <img src="assets/images/logo/ddse_logo.png" alt="DDSE Logo" class="nav-logo-img">
-        <div class="nav-logo-text">DD<span>SE</span></div>
-      </a>
-      <div class="nav-links">
+      <nav class="navbar">
+        <div class="container">
+          <a href="index.html" class="nav-logo">
+            <img src="assets/images/logo/ddse_logo.png" alt="DDSE Logo" class="nav-logo-img">
+            <div class="nav-logo-text">Dimension<br>Digital</div>
+          </a>
+
+          <div class="nav-links">
+            <div class="nav-item has-dropdown">
+              <button class="nav-link">Services <svg class="dropdown-arrow" viewBox="0 0 12 12" width="10" height="10">
+                  <polyline points="2 4 6 8 10 4" fill="none" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" />
+                </svg></button>
+              <div class="mega-menu">
+                <div class="mega-menu-inner">
+                  <div class="mega-col">
+                    <h5 class="mega-heading">Survey Services</h5>
+                    <a href="services.html" class="mega-link">
+                      <span class="mega-link-title">Topographical Survey</span>
+                      <span class="mega-link-desc">Precision land survey using digital total stations</span>
+                    </a>
+                    <a href="services.html" class="mega-link">
+                      <span class="mega-link-title">GPS / DGPS Survey</span>
+                      <span class="mega-link-desc">Satellite-based positioning and mapping</span>
+                    </a>
+                    <a href="services.html" class="mega-link">
+                      <span class="mega-link-title">Bathymetric Survey</span>
+                      <span class="mega-link-desc">Water body depth measurement</span>
+                    </a>
+                    <a href="services.html" class="mega-link">
+                      <span class="mega-link-title">Hydrographic Survey</span>
+                      <span class="mega-link-desc">River and water body surveying</span>
+                    </a>
+                  </div>
+                  <div class="mega-col">
+                    <h5 class="mega-heading">Engineering Services</h5>
+                    <a href="services.html" class="mega-link">
+                      <span class="mega-link-title">Structural Design</span>
+                      <span class="mega-link-desc">Civil engineering structural calculations</span>
+                    </a>
+                    <a href="services.html" class="mega-link">
+                      <span class="mega-link-title">Quantity Survey</span>
+                      <span class="mega-link-desc">Project cost estimation and BOQ</span>
+                    </a>
+                    <a href="services.html" class="mega-link">
+                      <span class="mega-link-title">Volume Calculation</span>
+                      <span class="mega-link-desc">Cut and fill volume from survey data</span>
+                    </a>
+                    <a href="services.html" class="mega-link">
+                      <span class="mega-link-title">Engineering Consultancy</span>
+                      <span class="mega-link-desc">Technical consulting for infrastructure</span>
+                    </a>
+                  </div>
+                  <div class="mega-col">
+                    <h5 class="mega-heading">Soil & Land Services</h5>
+                    <a href="services.html" class="mega-link">
+                      <span class="mega-link-title">Soil Test / Sub-Soil Investigation</span>
+                      <span class="mega-link-desc">SPT test, bore hole, soil sampling</span>
+                    </a>
+                    <a href="services.html" class="mega-link">
+                      <span class="mega-link-title">Land Plotting & Development</span>
+                      <span class="mega-link-desc">Land subdivision and plotting</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="nav-item has-dropdown">
+              <button class="nav-link">Projects <svg class="dropdown-arrow" viewBox="0 0 12 12" width="10" height="10">
+                  <polyline points="2 4 6 8 10 4" fill="none" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" />
+                </svg></button>
+              <div class="mega-menu">
+                <div class="mega-menu-inner">
+                  <div class="mega-col">
+                    <h5 class="mega-heading">Government Projects</h5>
+                    <a href="projects.html" class="mega-link"><span class="mega-link-title">LGED Projects</span><span
+                        class="mega-link-desc">Local Government Engineering Department</span></a>
+                    <a href="projects.html" class="mega-link"><span class="mega-link-title">DPHE Projects</span><span
+                        class="mega-link-desc">Department of Public Health Engineering</span></a>
+                    <a href="projects.html" class="mega-link"><span class="mega-link-title">BWDB Projects</span><span
+                        class="mega-link-desc">Bangladesh Water Development Board</span></a>
+                    <a href="projects.html" class="mega-link"><span class="mega-link-title">MES Projects</span><span
+                        class="mega-link-desc">Military Engineer Services</span></a>
+                    <a href="projects.html" class="mega-link"><span class="mega-link-title">RHD Projects</span><span
+                        class="mega-link-desc">Roads & Highways Department</span></a>
+                  </div>
+                  <div class="mega-col">
+                    <h5 class="mega-heading">Documentation</h5>
+                    <a href="projects.html#certificates" class="mega-link"><span class="mega-link-title">Work Completion
+                        Certificates</span><span class="mega-link-desc">Verified project completions</span></a>
+                    <a href="reports.html" class="mega-link"><span class="mega-link-title">Download Reports</span><span
+                        class="mega-link-desc">Client survey report verification</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="nav-item has-dropdown">
+              <button class="nav-link">Why DDSE <svg class="dropdown-arrow" viewBox="0 0 12 12" width="10" height="10">
+                  <polyline points="2 4 6 8 10 4" fill="none" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" />
+                </svg></button>
+              <div class="mega-menu">
+                <div class="mega-menu-inner">
+                  <div class="mega-col">
+                    <h5 class="mega-heading">Our Company</h5>
+                    <a href="about.html" class="mega-link"><span class="mega-link-title">About Us</span><span
+                        class="mega-link-desc">Our story, mission, and values</span></a>
+                    <a href="team.html" class="mega-link"><span class="mega-link-title">Our Team</span><span
+                        class="mega-link-desc">Meet the professionals behind DDSE</span></a>
+                    <a href="ceo.html" class="mega-link"><span class="mega-link-title">Our CEO</span><span
+                        class="mega-link-desc">Leadership and global exposure</span></a>
+                  </div>
+                  <div class="mega-col">
+                    <h5 class="mega-heading">Credentials</h5>
+                    <a href="about.html#legal" class="mega-link"><span class="mega-link-title">Legal Status</span><span
+                        class="mega-link-desc">Government certifications and licenses</span></a>
+                    <a href="machines.html" class="mega-link"><span class="mega-link-title">Equipment &
+                        Technology</span><span class="mega-link-desc">Our precision survey instruments</span></a>
+                    <a href="gallery.html" class="mega-link"><span class="mega-link-title">Gallery</span><span
+                        class="mega-link-desc">Field work and office photos</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="nav-item has-dropdown">
+              <button class="nav-link">Resources <svg class="dropdown-arrow" viewBox="0 0 12 12" width="10" height="10">
+                  <polyline points="2 4 6 8 10 4" fill="none" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" />
+                </svg></button>
+              <div class="mega-menu">
+                <div class="mega-menu-inner">
+                  <div class="mega-col">
+                    <h5 class="mega-heading">Equipment</h5>
+                    <a href="machines.html" class="mega-link"><span class="mega-link-title">Survey Equipment</span><span
+                        class="mega-link-desc">Total stations, GPS, levels</span></a>
+                    <a href="machines.html" class="mega-link"><span class="mega-link-title">Soil Equipment</span><span
+                        class="mega-link-desc">SPT hammers, drilling pipes</span></a>
+                    <a href="machines.html" class="mega-link"><span class="mega-link-title">Field
+                        Accessories</span><span class="mega-link-desc">Chains, tapes, stakes</span></a>
+                  </div>
+                  <div class="mega-col">
+                    <h5 class="mega-heading">Media</h5>
+                    <a href="gallery.html" class="mega-link"><span class="mega-link-title">Photo Gallery</span><span
+                        class="mega-link-desc">Photos from field and office</span></a>
+                    <a href="reports.html" class="mega-link"><span class="mega-link-title">Download Reports</span><span
+                        class="mega-link-desc">Client report verification</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <a href="contact.html" class="nav-link">Contact</a>
+          </div>
+
+          <a href="contact.html" class="btn btn-primary btn-sm nav-cta">Get a Quote</a>
+          <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        </div>
+      </nav>
+
+      <div class="mobile-menu">
         <a href="index.html">Home</a>
-        <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
         <a href="team.html">Team</a>
         <a href="ceo.html">CEO</a>
         <a href="gallery.html">Gallery</a>
+        <a href="reports.html">Reports</a>
         <a href="contact.html">Contact</a>
       </div>
-      <a href="reports.html" class="btn btn-primary btn-sm nav-cta">Download Report</a>
-      <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
-    </div>
-  </nav>
-  <div class="mobile-menu">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="projects.html">Projects</a>
-    <a href="team.html">Team</a>
-    <a href="ceo.html">CEO</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="reports.html">Reports</a>
-    <a href="contact.html">Contact</a>
-  </div>
-</header>
+    </header>
+
+
 
     <main style="padding-top:100px">
       <section class="section-light">
@@ -181,5 +316,6 @@
   <script src="https://accounts.google.com/gsi/client" async defer></script>
   <script src="../config.js"></script>
   <script src="js/admin.js"></script>
+  </div> <!-- /site-wrapper -->
 </body>
 </html>

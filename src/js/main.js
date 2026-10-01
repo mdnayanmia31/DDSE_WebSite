@@ -52,6 +52,52 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ─── Mega Menu Toggle ───
+  // Use pointer-based detection: touch devices get click, mouse devices get hover
+  const isTouch = window.matchMedia('(pointer: coarse)').matches;
+
+  document.querySelectorAll('.nav-item.has-dropdown').forEach(item => {
+    const btn = item.querySelector('.nav-link');
+    let closeTimeout;
+
+    if (isTouch) {
+      // Touch devices: click to toggle
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const wasOpen = item.classList.contains('open');
+        document.querySelectorAll('.nav-item.has-dropdown').forEach(i => i.classList.remove('open'));
+        if (!wasOpen) item.classList.add('open');
+      });
+    } else {
+      // Mouse devices: hover to open, with graceful close delay
+      item.addEventListener('mouseenter', () => {
+        clearTimeout(closeTimeout);
+        document.querySelectorAll('.nav-item.has-dropdown').forEach(i => i.classList.remove('open'));
+        item.classList.add('open');
+      });
+
+      item.addEventListener('mouseleave', () => {
+        closeTimeout = setTimeout(() => {
+          item.classList.remove('open');
+        }, 200);
+      });
+
+      // Also support click for keyboard/accessibility
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const wasOpen = item.classList.contains('open');
+        document.querySelectorAll('.nav-item.has-dropdown').forEach(i => i.classList.remove('open'));
+        if (!wasOpen) item.classList.add('open');
+      });
+    }
+  });
+
+  // Close mega menus on outside click
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.nav-item.has-dropdown').forEach(i => i.classList.remove('open'));
+  });
+
   // ─── Active Nav Link ───
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-links a, .mobile-menu a').forEach(link => {
